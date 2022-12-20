@@ -1,4 +1,4 @@
-# sass-base-2022-
+# project 3 - 2022
 
 ## clone update  base system
 `git clone https://github.com/julieechristensen/sass-base-2022-.git .`
@@ -8,4 +8,4 @@
 
 ## develop 
 `sass --watch src/scss/style.scss style.css`
-# ptoject-3
+
