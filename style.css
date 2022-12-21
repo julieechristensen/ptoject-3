@@ -23,7 +23,7 @@
   --color-accent-700: #009fbb;
   --color-accent-800: #009fbb;
   --color-accent-900: #009fbb;
-  --color-light: #efe4d8;
+  --color-light: #fff;
   --color-light-200: #efe4d8;
   --color-light-300: #efe4d8;
   --color-light-400: #efe4d8;
@@ -83,24 +83,14 @@ li {
   line-height: var --line-height;
 }
 
-.test {
-  background-color: var(--color-dark);
-  color: var(--color-light);
-  padding: 1rem 2rem;
-  border: 0;
-  border-radius: 2rem;
-  font-size: 1rem;
-  font-weight: 700;
-  display: inline-block;
-  text-decoration: none;
-}
-.test:hover {
-  background-color: var(--color-accent);
-  color: var(--color-light);
-}
-
 .hero {
-  background-color: black;
+  background-color: var(--color-light);
+  height: 100vh;
+  display: grid;
+  padding: 2rem;
+}
+.hero__inner {
+  background-color: #000;
 }
 
 /*# sourceMappingURL=style.css.map */
