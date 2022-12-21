@@ -1,0 +1,12 @@
+.site-header {
+    position: fixed;
+    height: 160px;
+    width: 100%;
+    background-color: green;
+    display: grid;
+    grid-template-columns: var(--grid-container);
+
+    &__inner {
+        background-color: blue; //temp
+    }
+}
