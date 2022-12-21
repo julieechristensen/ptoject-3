@@ -1,3 +1,10 @@
 .hero {
-    background-color: black;
+    background-color:var(--color-light);
+    height: 100vh;
+    display: grid;
+    padding: 2rem;
+
+    &__inner {
+        background-color:#000 ; //temp
+    }
 }
