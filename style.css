@@ -1,6 +1,6 @@
 :root {
   --section-gap:8rem;
-  --section-gap-inner:calc( var(--section-gap)*0.75)
+  --section-gap-inner:calc( var(--section-gap)*0.75);
   --gap-xl:4rem;
   --gap-l:3rem;
   --gap-m:2rem;
@@ -32,6 +32,9 @@
   --color-light-700: #efe4d8;
   --color-light-800: #efe4d8;
   --color-light-900: #efe4d8;
+  --grid-container:[full-start]minmax(32px, 1fr )
+  [inner-start] minmax(0, 75rem)
+  [inner-end] minmax(32px, 1fr ) [full-end];
   --font-sans: "arial", sans-serif;
   --font-serif: "georgia,"serif;
   --line-height:1.5;
@@ -81,6 +84,31 @@ a:hover {
 
 li {
   line-height: var --line-height;
+}
+
+.site-header {
+  position: fixed;
+  height: 160px;
+  width: 100%;
+  display: grid;
+  padding: 0 var(--gap-xl);
+}
+.site-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-header__branding {
+  background-color: pink;
+  width: 165px;
+  height: 45px;
+  display: block;
+}
+
+.menu {
+  width: 640px;
+  height: 45px;
+  background-color: pink;
 }
 
 .hero {

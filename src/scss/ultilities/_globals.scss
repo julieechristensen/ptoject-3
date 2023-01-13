@@ -1,7 +1,7 @@
 :root {
 
-    --section-gap:8rem;
-    --section-gap-inner:calc( var(--section-gap)*0.75)
+    --section-gap:8rem; 
+    --section-gap-inner:calc( var(--section-gap)*0.75);
 
     --gap-xl:4rem;
     --gap-l:3rem;
@@ -39,7 +39,9 @@
     --color-light-900: #efe4d8; 
 
     //containers 
-    --grid-container: minmax(32px, 1fr) minmax(0, 75rem) minmax(32px, 1fr)
+    --grid-container:[full-start]minmax(32px, 1fr )
+    [inner-start] minmax(0, 75rem)
+    [inner-end] minmax(32px, 1fr ) [full-end];
 
    
    

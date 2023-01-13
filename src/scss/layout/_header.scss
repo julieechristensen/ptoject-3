@@ -2,11 +2,23 @@
     position: fixed;
     height: 160px;
     width: 100%;
-    background-color: green;
+   
     display: grid;
-    grid-template-columns: var(--grid-container);
+    padding: 0 var(--gap-xl);
 
-    &__inner {
-        background-color: blue; //temp
+
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       
     }
+
+    &__branding {
+        background-color: pink;
+        width: 165px;
+        height: 45px;
+        display: block;
+    }
+
 }
