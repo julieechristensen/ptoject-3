@@ -7,5 +7,6 @@
 `git clone https://github.com/julieechristensen/sass-base-2022-.git . && rm -rf .git`
 
 ## develop 
-`sass --watch src/scss/style.scss style.css`
+``
 
+sass --watch src/scss/style.scss style.css
