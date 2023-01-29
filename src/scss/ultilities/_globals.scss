@@ -18,9 +18,10 @@
     --color-dark-700:#b5b5b5;
     --color-dark-800:#d5d5d5;
     --color-dark-900:#f1f1f1; 
-    --color-accent: #009fbb; 
-    --color-accent-200: #009fbb; 
-    --color-accent-300: #009fbb; 
+
+    --color-accent: #D8C3A3; 
+    --color-accent-200: #dec5a0; 
+    --color-accent-300: #dbd1c2; 
     --color-accent-400: #009fbb; 
     --color-accent-500: #009fbb; 
     --color-accent-600: #009fbb; 
@@ -34,7 +35,7 @@
     --color-light-400: #efe4d8; 
     --color-light-500: #efe4d8; 
     --color-light-600: #efe4d8; 
-    --color-light-700: #efe4d8; 
+    --color-light-700: #aaa; 
     --color-light-800: #efe4d8; 
     --color-light-900: #efe4d8; 
 
@@ -45,14 +46,14 @@
 
    
    
-    --font-sans: 'arial', sans-serif; 
-    --font-serif: 'georgia,'serif;
+    --font-sans: 'futura-pt', 'arial', sans-serif; 
+    --font-serif: 'guesta-grande', georgia,'serif' ;
 
     
     --line-height:1.5;
 
     --font-scale:1.25;
-    --font-size:1rem; 
+    --font-size:1.125rem; 
   
 
     --font-size-1:var(--font-size);

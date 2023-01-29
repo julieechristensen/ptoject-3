@@ -5,12 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beartour - your traveling agent</title>
+    <link rel="stylesheet" href="https://use.typekit.net/zbm4dlr.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- header -->
    <div class="site-header">
    <div class="site-header__inner">
+
+    
+
     <!-- logo -->
         <a href="index.html" class="site-header__branding">
             <svg xmlns="http://www.w3.org/2000/svg" width="164.318" height="39.814" viewBox="0 0 164.318 39.814">
@@ -20,12 +24,18 @@
         <!-- menu -->
         <nav class="menu">
             <ul class="menu__list">
-                <li class="menu__item"><a href="" class="menu__link">about</a></li>
+                <li class="menu__item menu__item--current"><a href="" class="menu__link">about</a></li>
                 <li class="menu__item"><a href="" class="menu__link">destinations</a></li>
                 <li class="menu__item"><a href="" class="menu__link">contact</a></li>
             </ul>
             <button class="menu__button">
-                <img src="assets/icons/icon-menu.svg" alt="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="33.673" height="24.405" viewBox="0 0 33.673 24.405">
+                    <g id="Menu" transform="translate(-1838.827 -39.095)">
+                      <path id="Path_18" data-name="Path 18" d="M31.673,0H0" transform="translate(1839.827 40.095)" fill="rgba(0,0,0,0)" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+                      <path id="Path_16" data-name="Path 16" d="M31.673,0H0" transform="translate(1839.827 51.298)" fill="rgba(0,0,0,0)" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+                      <path id="Path_17" data-name="Path 17" d="M22.5,0H0" transform="translate(1849 62.5)" fill="rgba(0,0,0,0)" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+                    </g>
+                  </svg>
             </button>
         </nav>
 
@@ -38,6 +48,10 @@
 
         <div class="hero__inner">
 
+            <video class ="hero__video" autoplay loop muted playsinline>
+                <source src="assets/video/production ID_4909244.mp4" type="video/mp4">
+            </video>
+
             <div class="hero__main">
 
                 <div class="hero__content">
@@ -47,7 +61,7 @@
                         <a href="" class="destination__category">cape town - south africa </a>
                         <h2 class="destination__title">Amazing highlands</h2>
                         <h4 class="destination__subtitle">A hidden gem in south africa</h4>
-                        <a href="" class="button button--icon-plus button--text button--icon-opacity">
+                        <a href="" class="destination__button button ">
                             <svg xmlns="http://www.w3.org/2000/svg" width="42.999" height="42.999" viewBox="0 0 42.999 42.999">
                                 <path id="circle" d="M130.326,239.85a21.074,21.074,0,1,1,8.174,1.65A20.924,20.924,0,0,1,130.326,239.85Z" transform="translate(-117 -199)" fill="none" stroke="#fff" stroke-width="1"/>
                               </svg>
@@ -99,7 +113,7 @@
                         <span class="counter__total">7</span>
                     </div>
 
-                    <button class="button--next">
+                    <button class="button button--next">
                         <svg xmlns="http://www.w3.org/2000/svg" width="43" height="43" viewBox="0 0 43 43">
                             <g id="icon-arrow-circle-right" transform="translate(-1811 -980)">
                               <g id="Path_15" data-name="Path 15" transform="translate(1811 980)" fill="none">

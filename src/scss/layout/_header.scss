@@ -2,9 +2,10 @@
     position: fixed;
     height: 160px;
     width: 100%;
-   
     display: grid;
     padding: 0 var(--gap-xl);
+    z-index: 999;
+   
 
 
     &__inner{
@@ -15,9 +16,8 @@
     }
 
     &__branding {
-        background-color: pink;
-        width: 165px;
-        height: 45px;
+       
+      
         display: block;
     }
 
