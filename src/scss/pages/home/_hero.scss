@@ -62,6 +62,19 @@
        opacity: 0.54;
        font-family: var(--font-serif);
        font-size: var(--font-size-1);
+        transition: all 0.2s;
+
+        svg path {
+            transition: fill 0.2s;
+        }
+
+       &:hover {
+        opacity: 1;
+
+        svg path {
+            fill: var(--color-accent);
+        }
+       }
        
     }
 
@@ -80,6 +93,20 @@
             background-color: var(--color-light);
             opacity: 0.34;
             margin: 0 8vw;
+        }
+
+        .button--next,
+        .button--prev {
+
+            #union_1, #union_2 {
+                transition: all 0.2s;
+            }
+
+            &.hover {
+                #union_1, #union_2 {
+                    fill: var(--color-accent);
+                }
+            }
         }
        
     }
@@ -146,7 +173,19 @@
 
     &__button {
      @include button.default ($icon-opacity:0.34);
-     margin-top: var(--gap-xl)
+     margin-top: var(--gap-xl);
+
+     svg {
+        transition: all 0.2s;
+     }
+        &:hover {
+            svg {
+                opacity: 1;
+                transform: rotate(90deg);
+            }
+
+        }
+    
     }
 }
 

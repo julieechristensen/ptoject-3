@@ -93,9 +93,8 @@ li {
   border: 0;
   padding: 0;
   font-size: var(--font-size-2);
-  display: inline-block;
   text-decoration: none;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: var(--gap-s);
 }
@@ -154,6 +153,10 @@ li {
 .menu__link {
   color: var(--color-light);
   font-size: var(--font-size-2);
+  transition: all 0.2s;
+}
+.menu__link:hover {
+  color: var(--color-light-200);
 }
 .menu__button {
   background-color: transparent;
@@ -161,11 +164,13 @@ li {
   border: 0;
   padding: 0;
   font-size: var(--font-size-2);
-  display: inline-block;
   text-decoration: none;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: var(--gap-s);
+  width: 34px;
+  height: 34px;
+  position: relative;
 }
 .menu__button svg {
   opacity: 1;
@@ -174,8 +179,47 @@ li {
   background-color: transparent;
   color: var(--color-light);
 }
+.menu__button--close .hamburger, .menu__button:focus .hamburger {
+  height: 0;
+}
+.menu__button--close .hamburger::before, .menu__button--close .hamburger:after, .menu__button:focus .hamburger::before, .menu__button:focus .hamburger:after {
+  top: 0;
+  transition: top 0.2s, transform 0.2s 0.2s, width 0s 0.2s;
+}
+.menu__button--close .hamburger::before, .menu__button:focus .hamburger::before {
+  transform: rotate(-45deg);
+}
+.menu__button--close .hamburger::after, .menu__button:focus .hamburger::after {
+  width: 100%;
+  transform: rotate(45deg);
+}
 .menu__item--current {
   font-weight: 600;
+}
+
+.hamburger {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 2px;
+  width: 100%;
+  background-color: var(--color-light);
+  transition: height 0s 0.2s;
+}
+.hamburger::before, .hamburger::after {
+  content: "";
+  display: block;
+  background-color: inherit;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  top: -8px;
+  transition: top 0.2s 0.2s, transform 0.2s;
+}
+.hamburger::after {
+  top: 8px;
+  width: 70%;
+  right: 0;
 }
 
 .hero {
@@ -223,14 +267,14 @@ li {
   border: 0;
   padding: 0;
   font-size: var(--font-size-2);
-  display: inline-block;
   text-decoration: none;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: var(--gap-s);
   opacity: 0.54;
   font-family: var(--font-serif);
   font-size: var(--font-size-1);
+  transition: all 0.2s;
 }
 .hero__prev-link svg {
   opacity: 1;
@@ -238,6 +282,15 @@ li {
 .hero__prev-link:hover {
   background-color: transparent;
   color: var(--color-light);
+}
+.hero__prev-link svg path {
+  transition: fill 0.2s;
+}
+.hero__prev-link:hover {
+  opacity: 1;
+}
+.hero__prev-link:hover svg path {
+  fill: var(--color-accent);
 }
 .hero__pagination {
   align-items: center;
@@ -253,6 +306,16 @@ li {
   background-color: var(--color-light);
   opacity: 0.34;
   margin: 0 8vw;
+}
+.hero__pagination .button--next #union_1, .hero__pagination .button--next #union_2,
+.hero__pagination .button--prev #union_1,
+.hero__pagination .button--prev #union_2 {
+  transition: all 0.2s;
+}
+.hero__pagination .button--next.hover #union_1, .hero__pagination .button--next.hover #union_2,
+.hero__pagination .button--prev.hover #union_1,
+.hero__pagination .button--prev.hover #union_2 {
+  fill: var(--color-accent);
 }
 .hero__social {
   position: absolute;
@@ -299,9 +362,8 @@ li {
   border: 0;
   padding: 0;
   font-size: var(--font-size-2);
-  display: inline-block;
   text-decoration: none;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: var(--gap-s);
   margin-top: var(--gap-xl);
@@ -312,6 +374,13 @@ li {
 .destination__button:hover {
   background-color: transparent;
   color: var(--color-light);
+}
+.destination__button svg {
+  transition: all 0.2s;
+}
+.destination__button:hover svg {
+  opacity: 1;
+  transform: rotate(90deg);
 }
 
 .social {

@@ -33,17 +33,79 @@
    &__link {
     color: var(--color-light);
     font-size: var(--font-size-2);
+    transition: all 0.2s;
+    &:hover {
+        color: var(--color-light-200)
+    }
    }
 
    &__button {
     @include button.default;
+    width: 34px;
+    height: 34px;
+    position: relative;
+
+   &--close,
+   &:focus {
+
+        .hamburger {
+            height: 0;
+            
+
+            &::before, &:after { 
+                top: 0;
+                transition: top 0.2s, transform 0.2s 0.2s, width 0s 0.2s ;
+            }
+
+            &::before {
+            transform: rotate(-45deg);
+            }
+
+            &::after {
+                width: 100%;
+                transform: rotate(45deg);
+            }
+
+        }
+
    }
 
-   &__item {
+   }
 
-    &--current {
-        font-weight: 600;
+    &__item {
+
+        &--current {
+            font-weight: 600;
+        }
     }
     
-   }
-}
+ }
+
+.hamburger {
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 2px;
+    width: 100%;
+    background-color: var(--color-light);
+    transition: height 0s 0.2s;
+
+    &::before, &::after {
+        content: '';
+        display: block;
+        background-color: inherit;
+        height: 2px;
+        width: 100%;position: absolute;
+        top: -8px;
+        transition: top 0.2s 0.2s, transform  0.2s ;
+    }
+
+    &::after {
+        top: 8px;
+        width: 70%;
+        right: 0;
+    }
+  }
+  
+
