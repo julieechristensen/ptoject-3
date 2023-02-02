@@ -1,4 +1,5 @@
 @use '../../components/buttons' as button;
+@use '../../ultilities/responsive' ;
 
 .hero {
     background-color:var(--color-light);
@@ -6,6 +7,11 @@
     display: grid;
     padding: 2rem;
     color: var(--color-light);
+
+    // responsive
+    @include responsive.max(62.5rem) {
+        padding: 16px;
+    }
   
 
     &__inner {
@@ -27,18 +33,19 @@
         width: 100%;
         left: 0;
         top: 0;
-        object-fit: cover;
-
-        
+        object-fit: cover; 
     }
 
     &__main {
         grid-area: hero-main;
         padding: var(--gap-m) var(--gap-xl);
         position: relative;
-        
 
-    }
+        @include responsive.max(30rem) {
+            padding: var(--gap-m) var(--gap-m);
+        }
+        }
+
 
     &__footer {
         grid-area: hero-footer;
@@ -51,11 +58,8 @@
     &__content {
         max-width: 50rem;
         width: 100%;
-       
-       
-        
-
     }
+
 
     &__prev-link {
        @include button.default;
@@ -63,6 +67,10 @@
        font-family: var(--font-serif);
        font-size: var(--font-size-1);
         transition: all 0.2s;
+
+        @include responsive.max(40rem) {
+            display: none;
+        }
 
         svg path {
             transition: fill 0.2s;
@@ -73,7 +81,7 @@
 
         svg path {
             fill: var(--color-accent);
-        }
+         }
        }
        
     }
@@ -93,23 +101,34 @@
             background-color: var(--color-light);
             opacity: 0.34;
             margin: 0 8vw;
-        }
+            
 
-        .button--next,
-        .button--prev {
-
-            #union_1, #union_2 {
-                transition: all 0.2s;
-            }
-
-            &.hover {
-                #union_1, #union_2 {
-                    fill: var(--color-accent);
-                }
+            @include responsive.max(40rem) {
+                margin-left: 0;
             }
         }
-       
+  
+    .button--next,
+    .button--prev {
+        @include responsive.max(30rem) {
+            max-width: 2rem;
+        }
+        
+        #Union_1, #Union_2 {
+            transition: all 0.2s;
+        }
+
+        &:hover {
+            #Union_1, #Union_2 {
+                fill: var(--color-accent);
+            }
+        }
     }
+}
+
+
+    
+
 
     &__social {
      
@@ -132,13 +151,12 @@
             background-color: var(--color-light);
             opacity: 0.34; 
             margin: 0 var(--gap-l);
-
-
-        }
+            }
 
     }
 
     .counter {
+        white-space: nowrap;
 
         &__total {
             &::before {
@@ -150,30 +168,41 @@
 
 .destination {
 
+    padding-right: var(--gap-m);
+
     &__category {
         font-size: var(--font-size-2);
         margin-bottom: var(--gap-m);
         display: block;
         color: var(--color-dark-700);
+        @include responsive.max(40rem) {
+            font-size: var(--font-size-1);
+        }
     }
 
     &__title {
         font-size: 5.25rem;
+        font-size: clamp (3rem, 10vw, 5.25rem);
         margin: 0;
        
     }
 
     &__subtitle {
         font-size: var(--font-size-4);
+        font-size: clamp( var(--font-size-2), 8vw, var(--font-size-4));
         font-style: italic;
         font-weight: 300;
-        margin: 0;
+        margin: 0.5rem 0 0 0;
         color: var(--color-accent);
     }
 
     &__button {
      @include button.default ($icon-opacity:0.34);
      margin-top: var(--gap-xl);
+
+        @include responsive.max(40rem) {
+            font-size: var(--font-size-1);
+        }
 
      svg {
         transition: all 0.2s;

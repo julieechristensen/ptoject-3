@@ -1,3 +1,5 @@
+@use '../ultilities/responsive';
+
 .site-header {
     position: fixed;
     height: 160px;
@@ -5,6 +7,10 @@
     display: grid;
     padding: 0 var(--gap-xl);
     z-index: 999;
+
+    @include responsive.max(40rem) {
+        padding: 0 var(--gap-l);
+    }
    
 
 

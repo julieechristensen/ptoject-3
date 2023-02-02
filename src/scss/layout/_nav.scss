@@ -1,4 +1,5 @@
 @use '../components/buttons' as button;
+@use '../ultilities/responsive';
 
 .menu { 
   
@@ -19,6 +20,10 @@
             margin: 0 var(--gap-xl) 0 0;
             right: 100%;
             top: 50%;
+
+            @include responsive.max(62.5rem) {
+                display: none;
+            }
         }
 
     &__list {
@@ -28,6 +33,10 @@
         display: flex;
         align-items: center;
         gap: var(--gap-l);
+
+        @include responsive.max(55rem) {
+            display: none;
+        }
     }
 
    &__link {
